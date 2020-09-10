@@ -1,7 +1,7 @@
 # people_daily-ner-pretreatment
 人民日报命名实体识别数据集预处理程序，生成BMES标记的数据，并保留分词信息、词性标注信息。renminribao NER pretreatment.
 
-__注： 忽然发现原来fastnlp已经给了人民日报的bio标注版本，下载地址：[fastnlp人民日报ner数据集](http://212.129.155.247/dataset/peopledaily.zip)，后续只要进行bio到bmeso的处理就行了。如果用fastnlp提供的版本，直接把 bio2bmeso.py文件放到解压后的文件夹里，执行就可以得到目标文件。下面的记录是从人民日报原始文件处理得到bmeso标注文件的操作流程，很繁琐，还是推荐用fastnlp提供的版本，下面的操作就可以忽略了__
+__注： 忽然发现原来fastnlp已经给了人民日报的bio标注版本，下载地址：[fastnlp人民日报ner数据集](http://212.129.155.247/dataset/peopledaily.zip)，后续只要进行bio到bmeso的处理就行了。如果用fastnlp提供的版本，直接把 bio2bmeso.py文件放到解压后的文件夹里，执行就可以得到目标文件。下面的记录是从人民日报原始文件处理得到bmeso标注文件的操作流程，很繁琐，还是推荐用fastnlp提供的版本，下面的操作就可以忽略了。但是实验发现了一个问题，使用fastnlp提供的人民日报，同样复旦出品的TENER及FLAT表现相当差劲，模型训练结束还不如瞎猜，也不知道为什么__
 
 ## 获取数据集处理成conll格式
 参考[howl-anderson的教程](https://github.com/howl-anderson/tools_for_corpus_of_people_daily)，分别执行前两步编码格式更改与原始语料库解析
